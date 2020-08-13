@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <script>
+    //enter refresh time in "minutes:seconds" Minutes should range from 0 to inifinity. Seconds should range from 0 to 59
+    var limit="00:59"
+    
+    if (document.images){
+    var parselimit=limit.split(":")
+    parselimit=parselimit[0]*60+parselimit[1]*1
+    }
+    function beginrefresh(){
+    if (!document.images)
+    return
+    if (parselimit==1)
+    window.location.href="?"
+    else{ 
+    parselimit-=1
+    curmin=Math.floor(parselimit/60)
+    cursec=parselimit%60
+    if (curmin!=0)
+    curtime=curmin+" minutes and "+cursec+" seconds left until page refresh!"
+    else
+    curtime=cursec+" seconds left until page refresh!"
+    window.status=curtime
+    setTimeout("beginrefresh()",1000)
+    }
+    }
+    
+    //window.onload=beginrefresh
+    
+    </script>
+    </head>
+    <body>
+    <div style="position: absolute; left: 30px; top: 30px;">
+    <a href="?mod=korrused&id=4"><input type="button" value="4. Korrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    <br><br>
+    <a href="?mod=korrused&id=3"><input type="button" value="3. Korrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    <br><br>
+    <a href="?mod=korrused&id=2"><input type="button" value="2. Korrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    <br><br>
+    <a href="?mod=korrused&id=1"><input type="button" value="1. Korrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    <br><br>
+    <a href="?mod=korrused&id=0"><input type="button" value="0. Korrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    <br><br>
+    <a href="?mod=korrused&id=k"><input type="button" value="Keldrikorrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    </div><div style="position: absolute; left: 30px; bottom: 30px; ">
+    <a href="index.html"><input type="button" value="Algusesse" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50"></a>
+    </div>
+    <script language="javascript">
+        beginrefresh();
+    </script>
+    <body style="margin:0; color: white">
+    <img src="https://siseveeb.nooruse.ee/interaktiivne_majajuht/plaanid/0_korrus.jpg" alt="" usemap="#Map" />
+    <map name="Map" id="Map">
+        <area alt="" title="020" href="#" shape="poly" coords="757,134,1017,137,1015,414,757,414" />
+        <area alt="" title="003" href="#" shape="poly" coords="1163,166,1380,159,1375,339,1173,337" />
+        <area alt="" title="004" href="#" shape="poly" coords="1388,168,1534,166,1531,332,1387,339" />
+        <area alt="" title="005" href="#" shape="poly" coords="1543,166,1690,166,1690,341,1544,337" />
+        <area alt="" title="006" href="#" shape="poly" coords="1702,161,1865,159,1861,341,1702,342" />
+        <area alt="" title="011" href="#" shape="poly" coords="700,829,1361,826,1093,1044,890,1038" />
+        <area alt="" title="014" href="#" shape="poly" coords="559,549,664,549,662,679,575,679,542,642,559,630" />
+        <area alt="" title="015" href="#" shape="poly" coords="489,419,662,419,664,509,676,514,676,538,485,538" />
+        <area alt="" title="016" href="#" shape="poly" coords="495,287,662,285,664,380,676,380,678,407,489,407" />
+        <area alt="" title="017" href="#" shape="poly" coords="501,153,664,155,664,229,678,231,676,280,495,280" />
+        <area alt="" title="007" href="#" shape="poly" coords="1296,423,1638,421,1638,555,1671,555,1496,705,1412,708,1410,734,1222,730,1222,687,1298,681,1294,654,1265,654,1270,545,1249,536,1249,438,1296,440" />
+        <area alt="" title="" href="#" shape="poly" coords="756,462,1015,462,1014,523,963,524,963,501,758,504" />
+        <area alt="" title="" href="#" shape="poly" coords="1090,769,1156,772,1154,821,1087,826" />
+        <area alt="" title="" href="#" shape="poly" coords="753,544,1020,547,1022,645,753,640" />
+    </map>
+    <div style="position: absolute; left: 780px; top: 30px; ">
+    <input type="button" value="0. Korrus" style="background-color: white; color: black; font-size: 30; font-weight: bold; width: 250; height: 50">
+    </div>
+    </body>
+    </body>
+    </html>
+    
